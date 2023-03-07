@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/common.css" />
+    <style>
+      .header {
+        width: 100%;
+        min-width: 1300px;
+        height: 84px;
+        background: #000;
+        background-color: rgba(0, 0, 0, 0.8);
+      }
+      .header .header_inner {
+        position: relative;
+        z-index: 111;
+        display: flex;
+        justify-content: space-between;
+        width: 1300px;
+        height: 84px;
+        /* background-color: green; */
+        margin: 0 auto;
+      }
+      .header .header_inner .logo {
+        position: relative;
+        top: 50%;
+        left: 50%;
+        display: block;
+        width: 200px;
+        line-height: 54px;
+        background: url('./img/logo_\(2\).png') no-repeat center center;
+        text-indent: -999px;
+        transform: translate(-50%, -50%);
+      }
+      .header .header_inner .main-nav {
+        display: flex;
+        flex: 1;
+        transform: translate(34px);
+      }
+      .header .header_inner .main-nav > li {
+        width: 115px;
+        height: 84px;
+        text-align: center;
+      }
+      .header .header_inner .main-nav > li:hover {
+        background: url('./img/index.png') no-repeat;
+        display: inline-block;
+      }
+      .header .header_inner .main-nav > li > a {
+        display: block;
+        width: 110px;
+        height: 64px;
+        padding: 20px 0 0;
+        color: #c9c9c9;
+        font-size: 18px;
+        line-height: 30px;
+      }
+      .header .header_inner .main-nav i {
+        display: block;
+        padding-top: 5px;
+        font-size: 12px;
+        line-height: 16px;
+        color: #858792;
+      }
+      .header .header_inner .login_pannel {
+        display: flex;
+        align-items: center;
+        width: 182px;
+      }
+      .header .header_inner .login_pannel > a {
+        display: block;
+        margin-right: 7px;
+      }
+      .header .header_inner .login_pannel > a > img {
+        border: 1px solid #d9ad50;
+        border-radius: 42px;
+      }
+      .header .header_inner .login_pannel .unlogin .unlogin_info {
+        width: 130px;
+      }
+      .header .header_inner .login_pannel .unlogin .unlogin_info > a {
+        color: #ffffff;
+        font-size: 16px;
+      }
+      .header .header_inner .login_pannel .unlogin .unlogin_info > p {
+        color: #858792;
+      }
+      /* 隐藏的导航 */
+      /* .header:hover .sub_nav {
+        height: 285px;
+      } */
+      .header .sub_nav {
+        /* height: 285px; */
+        height: 0;
+        position: absolute;
+        top: 83px;
+        left: 0;
+        width: 100%;
+        background: #000;
+        background: rgba(0, 0, 0, 0.7);
+        z-index: 3;
+        transition: all 0.3s ease;
+        overflow: hidden;
+        box-sizing: border-box;
+      }
+
+      .header .sub_nav .sub_nav_inner {
+        display: flex;
+        width: 890px;
+        height: 240px;
+        margin: 0 auto;
+        overflow: hidden;
+        zoom: 1;
+        padding-top: 15px;
+        padding-bottom: 30px;
+        padding: 15px 0 30px 50px;
+        /* background-color: orange; */
+      }
+
+      .header .sub_nav .sub_nav_inner .down_nav {
+        display: flex;
+        flex-direction: column;
+        width: 110px;
+        padding: 2px 2.5px 0;
+        text-align: center;
+        white-space: nowrap;
+      }
+
+      .header .sub_nav .sub_nav_inner .down_nav > a {
+        height: 30px;
+        line-height: 30px;
+        display: block;
+        padding: 0;
+        font-size: 14px;
+        color: #c9c9dd;
+      }
+      .icon_hot,
+      .icon_fans,
+      .icon_guard {
+        overflow: hidden;
+        display: inline-block;
+        width: 24px;
+        height: 24px;
+        vertical-align: middle;
+        background: url(./img/index.png) no-repeat -136px -5px;
+      }
+      .icon_hot {
+        background-position: -163px -68px;
+      }
+      .icon_guard {
+        background-position: -136px -5px;
+      }
+      .icon_fans {
+        background-position: -137px -68px;
+      }
+
+      /* 大背景 */
+      .bg_container .bg {
+        overflow: hidden;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 1300px;
+        background: url(./img/背景.jpg) no-repeat center top;
+        z-index: -5;
+      }
+
+      .bg_container .kv_link {
+        position: absolute;
+        z-index: 3;
+        width: 1200px;
+        height: 440px;
+        top: 90px;
+        left: 50%;
+        margin-left: -600px;
+        outline: none;
+        text-indent: -9999px;
+        overflow: hidden;
+        background: url(#);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">
+      <div class="header_inner">
+        <h1>
+          <a href="javascript:;" class="logo" title="王者荣耀">王者荣耀</a>
+        </h1>
+        <ul class="main-nav">
+          <li>
+            <a href="javascript:;" title="游戏资料">
+              游戏资料
+              <i>DATA</i>
+            </a>
+          </li>
+          <li>
+            <a href="javascript:;" title="内容中心">
+              内容中心
+              <i>CONTENTS</i>
+            </a>
+          </li>
+          <li>
+            <a href="javascript:;" title="赛事中心">
+              赛事中心
+              <i>MATCH</i>
+            </a>
+          </li>
+          <li>
+            <a href="javascript:;" title="百态王者">
+              百态王者
+              <i>CULTURE</i>
+            </a>
+          </li>
+          <li>
+            <a href="javascript:;" title="社区互动">
+              社区互动
+              <i>COMMUNITY</i>
+            </a>
+          </li>
+          <li>
+            <a href="javascript:;" title="玩家支持">
+              玩家支持
+              <i>PLAYER</i>
+            </a>
+          </li>
+          <li>
+            <a href="javascript:;" title="IP新游">
+              IP新游
+              <i>NEW GAMES</i>
+            </a>
+          </li>
+        </ul>
+        <div class="login_pannel">
+          <a href="javascript:;">
+            <img src="./img/下载.png" width="42" height="42" />
+          </a>
+          <div class="unlogin">
+            <div class="unlogin_info">
+              <a href="javascript:;">欢迎登录</a>
+              <p>登录后查看游戏战绩</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="sub_nav">
+        <ul class="sub_nav_inner">
+          <li class="down_nav">
+            <a href="javascript:;">版本介绍</a>
+            <a href="javascript:;">游戏介绍</a>
+            <a href="javascript:;">英雄资料</a>
+            <a href="javascript:;">
+              <i class="icon_hot"></i>
+              爆料站
+            </a>
+            <a href="javascript:;">
+              <i class="icon_fans"></i>
+              世界观体验站
+            </a>
+            <a href="javascript:;">游戏壁纸</a>
+          </li>
+          <li class="down_nav">
+            <a href="javascript:;">攻略中心</a>
+            <a href="javascript:;">开放素材库</a>
+            <a href="javascript:;">
+              <i class="icon_fans"></i>
+              内容共创平台
+            </a>
+            <a href="javascript:;">
+              <i class="icon_fans"></i>
+              手语打法参考
+            </a>
+          </li>
+          <li class="down_nav">
+            <a href="javascript:;">
+              <i class="icon_hot"></i>
+              世界冠军杯
+            </a>
+            <a href="javascript:;">挑战者杯</a>
+            <a href="javascript:;">KPL</a>
+            <a href="javascript:;">
+              <i class="icon_hot"></i>
+              全国大赛
+            </a>
+            <a href="javascript:;">女子公开赛</a>
+            <a href="javascript:;">K甲联赛</a>
+            <a href="javascript:;">高效联赛</a>
+            <a href="javascript:;">
+              <i class="icon_fans"></i>
+              王者赛宝
+            </a>
+            <a href="javascript:;">赛事数据</a>
+          </li>
+          <li class="down_nav">
+            <a href="javascript:;">
+              <i class="icon_hot"></i>
+              世界冠军杯
+            </a>
+            <a href="javascript:;">挑战者杯</a>
+            <a href="javascript:;">KPL</a>
+            <a href="javascript:;">
+              <i class="icon_hot"></i>
+              全国大赛
+            </a>
+            <a href="javascript:;">女子公开赛</a>
+            <a href="javascript:;">K甲联赛</a>
+            <a href="javascript:;">商户特权</a>
+            <a href="javascript:;">龙翼王者卡</a>
+          </li>
+          <li class="down_nav">
+            <a href="javascript:;">
+              <i class="icon_hot"></i>
+              世界冠军杯
+            </a>
+            <a href="javascript:;">挑战者杯</a>
+            <a href="javascript:;">KPL</a>
+            <a href="javascript:;">
+              <i class="icon_hot"></i>
+              全国大赛
+            </a>
+            <a href="javascript:;">女子公开赛</a>
+            <a href="javascript:;">K甲联赛</a>
+          </li>
+          <li class="down_nav">
+            <a href="javascript:;">腾讯游戏防沉迷</a>
+            <a href="javascript:;">
+              <i class="icon_guard"></i>
+              成长守护平台
+            </a>
+            <a href="javascript:;">对局环境情报站</a>
+            <a href="javascript:;">客服专区</a>
+            <a href="javascript:;">礼包兑换</a>
+            <a href="javascript:;">自助服务</a>
+          </li>
+          <li class="down_nav">
+            <a href="javascript:;">
+              <i class="icon_hot"></i>
+              世界冠军杯
+            </a>
+            <a href="javascript:;">挑战者杯</a>
+            <a href="javascript:;">KPL</a>
+            <a href="javascript:;">
+              <i class="icon_hot"></i>
+              全国大赛
+            </a>
+            <a href="javascript:;">女子公开赛</a>
+            <a href="javascript:;">K甲联赛</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <script></script>
+  </body>
+</html>
